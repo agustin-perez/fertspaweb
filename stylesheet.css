@@ -212,9 +212,10 @@ h1
 .info
 {
   background-image: url("Images/puerto2.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-attachment: fixed;
   background-size: cover;
+  background-position: bottom;
   width: 100%;
   color: white;
   text-align: center;
@@ -245,7 +246,6 @@ footer
   z-index: 0;
   height: 94%;
 }
-
 
 .mvisionTxt
 {
