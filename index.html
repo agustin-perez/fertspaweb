@@ -17,7 +17,7 @@
       <header id="inicio">
         <div class="barraMenu" id="responsiveStandard">
           <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsiveButton()">&#9776;</a>
-          <button class="btn" onclick="actualizarIframe('contenidoPrincipal.html');">Inicio</button>
+          <button class="btn" onclick="actualizarIframe('contenidoPrincipal.html'); abrirPopUp();">Inicio</button>
           <div class="contenedorBoton">
             <button class="dropContenedor" onclick="mostrarSub('menu1')">¿Quiénes somos?</button>
             <div class="contenedorBoton-content" id="menu1">
@@ -43,6 +43,18 @@
       </header>
     </section>
     <!--Fin de barra de menú-->
+	<!--Ventana info-->
+	<div id="popUp" class="ventanaPopUp">
+		<div class="infoPopUp">
+			<span class="cerrarPopUp">&times;</span>
+			<p>Fertspa Studios fue una empresa ficticia para el proyecto de pasaje de grado de la Escuela Superior de Informática,
+			por esa misma razón, esta página a partir del 01/12/2019 cerrará permanentemente.<br>
+			<br>
+			Si está interesado en el proyecto, o en nuestro equipo, visite nuestro <a style="text-decoration: none; color: gray;" href ="https://github.com/agustin-perez/logitask">repositorio de FERTSPA</a>
+			<br></p>
+			<div style="text-align: left;"><i>© Fertspa Studios SRL - 2019</i></div>
+		</div>
+	</div>
     <iframe class="contenidos" id="contenidos" width="100%" height="100%" frameborder="0" scrolling="auto" src="contenidoPrincipal.html"></iframe>
     <footer>
       <section>© Fertspa Studios SRL - 2019</section>

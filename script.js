@@ -44,32 +44,6 @@ function cerrarResponsive()
   }
 }
 
-function movimientoLogo()
-{
-  imagen = document.getElementById('logoInicio');
-  imagen.style.position= 'absolute'; 
-  imagen.style.top = posicionTopLogo;
-  imagen.style.left = '-400px';
-  imagen.style.visibility='hidden';
-  movimientoDerecha();
-} 
-function movimientoDerecha()
-{
-    if (parseFloat(imagen.style.left)<=parseFloat(window.outerWidth)/4)
-    { 
-        imagen.style.left = parseInt(imagen.style.left) + 10 + 'px';
-        imagen.style.visibility = 'visible';
-        time = setTimeout(movimientoDerecha,10);
-    }
-    else
-    pararAnimacion();
-}
-
-function pararAnimacion()
-{
-  clearTimeout(timer);
-} 
-
 function cerrarMenus()
 {
   var busMenu = document.getElementsByClassName('contenedorBoton-content');
@@ -84,21 +58,32 @@ function cerrarMenus()
     }
 }
 
+function abrirPopUp()
+{
+	document.getElementById("popUp").style.display = "block";
+}
+
 /**Eventos**/
 
 /**
- * Funcion encargada de tomar el evento al activarse la función onclick mediante el DOM y cerrar el menu desplegable.
+ * Funcion encargada de tomar el evento de cerrar el popup abierto y cerrar la lista desplegable de la barra superior.
  * @param {e} evento Variable de evento.
  */
 window.onclick = function(e) 
 {
+  if (e.target.matches('.cerrarPopUp') || e.target.matches('.ventanaPopUp'))
+  {
+    document.getElementById("popUp").style.display = "none";
+	movimientoLogo();
+  }
   if (!e.target.matches('.dropContenedor')) 
   {
     cerrarMenus();
   }
+  if (e.target.matches('.contenidos'))
+  {
+	  cerrarMenus();
+  }  
 } 
 
-
-window.addEventListener("resize", movimientoLogo);
-
-window.onload = movimientoLogo;
+window.onload = abrirPopUp;
