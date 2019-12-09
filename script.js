@@ -1,6 +1,5 @@
 /**Fertspa studios javascript source*/
 var menuActual = null;
-var posicionTopLogo = '30%';
 var timer;
 
 /**
@@ -74,7 +73,6 @@ window.onclick = function(e)
   if (e.target.matches('.cerrarPopUp') || e.target.matches('.ventanaPopUp'))
   {
     document.getElementById("popUp").style.display = "none";
-	movimientoLogo();
   }
   if (!e.target.matches('.dropContenedor')) 
   {
