@@ -207,10 +207,8 @@ h1
   width: 100%;
   float: none;
   z-index: 0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  -webkit-background-size: cover;
   z-index: -10;
 } 
 
@@ -218,30 +216,21 @@ h1
 {
   width:50%; 
   position: relative;
-  left: 25%;
-  top: 30%;
-  -webkit-animation-name: logoderecha;
-  -webkit-animation-duration: 3s;
-  animation-name: logoderecha;
-  animation-duration: 3s;
-  animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards; 
-  -moz-animation-fill-mode: forwards;   
-  -o-animation-fill-mode: forwards;    
-  -ms-animation-fill-mode: forwards;     
-  animation-fill-mode: forwards;   
+  left: -100%;
+  animation: logoderecha 3s 1s forwards;
+  -webkit-animation: logoderecha 3s 1s forwards;
 }
 
 @keyframes logoderecha
 {
-  0%   {left:-400px; top:30%;}
+  0%   {left:-100%; top:30%;}
   100% {left: 25%; top:30%;}
 }
 
 /* Navegadores viejos */
 @-webkit-keyframes logoderecha
 {
-  0%   {left:-400px; top:30%;}
+  0%   {left:-100%; top:30%;}
   100% {left: 25%; top:30%;}
 }
 
@@ -351,8 +340,6 @@ footer
   text-align: center;
   padding-left: 2vh; 
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   z-index: -10;
 }
@@ -382,17 +369,8 @@ footer
   width: 100%; 
   height: 100%; 
   overflow: hidden;
-  -webkit-animation-name: popupanimation;
-  -webkit-animation-duration: 2s;
-  animation-name: popupanimation;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  -webkit-animation-fill-mode: forwards; 
-  -moz-animation-fill-mode: forwards;   
-  -o-animation-fill-mode: forwards;    
-  -ms-animation-fill-mode: forwards;     
-  animation-fill-mode: forwards;   
-
+  animation: popupanimation 2s forwards;
+  -webkit-animation: popupanimation 2s forwards;
 }
 
 .infoPopUp {
@@ -406,7 +384,7 @@ footer
 
 @keyframes popupanimation
 {
-  0%   {top:-100%; background-color: rgba(0,0,0,0.0);}
+  0%   {top:-150%; background-color: rgba(0,0,0,0.0);}
   80%  {background-color: rgba(0,0,0,0.0);}
   100% {top:0; background-color: rgba(0,0,0,0.6);}
 }
@@ -414,7 +392,7 @@ footer
 /* Navegadores viejos */
 @-webkit-keyframes popupanimation
 {
-  0%   {top:-100%; background-color: rgba(0,0,0,0.0);}
+  0%   {top:-150%; background-color: rgba(0,0,0,0.0);}
   80%  {background-color: rgba(0,0,0,0.0);}
   100% {top:0; background-color: rgba(0,0,0,0.6);}
 }
