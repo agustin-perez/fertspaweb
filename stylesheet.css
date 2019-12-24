@@ -385,16 +385,16 @@ footer
 @keyframes popupanimation
 {
   0%   {top:-150%; background-color: rgba(0,0,0,0.0);}
-  80%  {background-color: rgba(0,0,0,0.0);}
-  100% {top:0; background-color: rgba(0,0,0,0.6);}
+  80%  {top:0; background-color: rgba(0,0,0,0.0);}
+  100% {background-color: rgba(0,0,0,0.6);}
 }
 
 /* Navegadores viejos */
 @-webkit-keyframes popupanimation
 {
   0%   {top:-150%; background-color: rgba(0,0,0,0.0);}
-  80%  {background-color: rgba(0,0,0,0.0);}
-  100% {top:0; background-color: rgba(0,0,0,0.6);}
+  80%  {top:0; background-color: rgba(0,0,0,0.0);}
+  100% {background-color: rgba(0,0,0,0.6);}
 }
 
 .cerrarPopUp {
